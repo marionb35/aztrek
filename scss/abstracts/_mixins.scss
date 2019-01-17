@@ -1,0 +1,38 @@
+@mixin cta($color-bouton, $color-background) {
+    display: inline-block;
+    position: relative;
+    border-radius: 40px;
+    border: solid 2px $color-bouton;
+    background-color: $color-background;
+    color: $color-bouton;
+    border: solid 2px $color-bouton;
+    padding: .5em 1em;
+    text-align: center;
+    transition: color .25s .25s/3;
+
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        border-radius: 40px;
+        background-color: $color-bouton;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &:hover {
+        color: white;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        width: 100%;
+        opacity: 1;
+    }
+}

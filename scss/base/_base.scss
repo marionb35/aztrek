@@ -1,0 +1,60 @@
+*{
+    box-sizing:border-box;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+  text-decoration: none;  
+  color: white;
+}
+
+.container{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $marge;
+}
+
+.small-container{
+    max-width: 700px;
+}
+
+.cta-orange{
+    @include cta($orange,transparent);
+}
+
+.cta-vert{
+    @include cta($vert,transparent);
+}
+
+.cta-bleu{
+    @include cta($bleu,transparent);
+}
+
+.cta-vert-blanc{
+    @include cta($vert,white);
+}
+
+.stabilo{
+    display: block;
+    width: 310px;
+    height: 60px;
+    background-image: url(../images/stabilo.png);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    margin: 0 auto;
+}
+
+.cadre-blanc{
+    background-color: rgba(255, 255, 255, 0.8);
+}

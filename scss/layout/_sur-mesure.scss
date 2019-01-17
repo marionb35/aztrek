@@ -1,0 +1,32 @@
+#sur-mesure {
+
+    background: url(../images/john-cameron-628661-unsplash.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+
+ 
+
+    .stabilo {
+        height: 80px;
+        background-image: url(../images/brush_bleue.png);
+        background-position-x: 30px;
+        padding-top: .2em;
+
+    }
+
+    .cadre-blanc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 200px auto 0;
+    } 
+    p {
+        padding: 20px;
+    }
+
+    .cta{
+        margin: $marge;
+    }
+
+}

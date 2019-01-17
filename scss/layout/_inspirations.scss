@@ -1,0 +1,133 @@
+.inspirations {
+    background-color: $beige;
+    background-image: url(../images/bg_inspirations_mobile.png);
+    background-size: cover;
+
+    @media (min-width:$bp-medium){
+        background-image: url(../images/bg_inspiration.png);
+    }
+
+    .container {
+        padding: 40px 0;
+    }
+
+
+    .sous-titre {
+        font-size: 1.125rem;
+        max-width: 900px;
+        margin: 20px auto;
+        
+    }
+
+    .carte-postale {
+        h3 {
+            color: $orange;
+        }
+
+        .carte-postale-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            p{
+                padding: $marge;
+            }
+
+            video{
+                display: block;
+                width: 300px;
+                border: solid 3px black;
+            }
+
+
+            @media (min-width: $bp-medium) {
+                flex-direction: row-reverse;
+            }
+
+            .infos-portrait {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    padding: $marge;
+                }
+            }
+            .cta{
+                margin: 20px 0;
+            }
+        }
+
+
+    }
+
+    .itineraires-experiences {
+        h3 {
+            color: $vert;
+        }
+
+        .polaroid-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            @media (min-width: $bp-medium) {
+                flex-direction: row;
+
+            }
+        }
+
+        .polaroid {
+            position: relative;
+            width: 300px;
+            height: 362px;
+            margin: $marge auto;
+
+            @media (min-width:$bp-medium){
+                &:nth-of-type(1){
+                    transform: rotate(-4deg);
+                    margin-top: 80px;
+                }
+                &:nth-of-type(2){
+                    transform: rotate(4deg);
+                    
+                }
+            }
+        }
+
+        .polaroid img {
+            width: 100%;
+        }
+
+        .overlay-polaroid {
+            position: absolute;
+            width: 265px;
+            height: 104px;
+            left: 17px;
+            bottom: 73px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.303);
+            color: white;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .titre-pola {
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin: 0;
+            bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .cta-inspirez {
+       display: block;
+        width: 250px;
+        margin: $marge auto;
+    }
+}

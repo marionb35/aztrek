@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+        url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'shadows_into_light_tworegular';
+    src: url('../fonts/shadowsintolighttwo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shadowsintolighttwo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing : antialiased;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6,
+a {
+    font-family: 'bebas_neuebold';
+    margin: 0
+}
+
+h2 {
+    color: white;
+    font-size: 3.125rem;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+
+h4{
+    margin: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+p{
+    margin: 0;
+    padding: $marge;
+}
+
+.script{
+    font-family: 'shadows_into_light_tworegular',sans-serif;
+    font-size: 2.25rem;
+}
+
+
+
+.medium{
+    font-weight: 500;
+}
+
+.bold{
+    font-weight: 700;
+}

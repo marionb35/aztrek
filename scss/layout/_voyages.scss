@@ -1,0 +1,56 @@
+#coupcoeur {
+    background: url(../images/asap-story-750215-unsplash_miroir.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#promo {
+    background: url(../images/karla-lopez-596646-unsplash.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#depart-immediat {
+    background: url(../images/cameron-wilkins-487426-unsplash.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.voyage {
+    padding: $marge;
+
+    .cadre-blanc {
+        margin: $marge;
+        width: 285px;
+        height: 285px;
+        color: $vert;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                text-align: center;
+            }
+
+            p {
+                font-size: .75rem;
+                color: black;
+            }
+
+            .points-cles {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: $marge;
+
+                .difficulte{
+                    background: url(../images/difficulte.png);
+                    background-size: cover;
+                    width: 80px;
+                    height: 12px;
+                    font-size: 0;
+                }
+            }
+
+        }
+    }
+}
