@@ -1,74 +1,10 @@
-<!doctype html>
-<html lang="fr">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="...">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AZTREK | Accueil</title>
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="./favicon.ico/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- STYLESHEET -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
+require_once "layout/header.php";
+require_once "layout/main_menu.php";
 
 
-
-
-<body>
-
-  <!-- nav en mobile -->
-  <div class="main-nav-mobile">
-    <a class="logo" href="#"><img src="./images/logo_aztrek_logo_aztrek_noir.svg" alt="logo aztrek" width="140" height="48"></a>
-    <nav id="mobile-nav">
-      <div>
-        <div class="menu-toggle"><span>Menu</span>
-        </div>
-        <ul class="menu">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Nos aventures</a></li>
-          <li><a href="#">Inspirations</a></li>
-          <li><a href="#">Sur mesure</a></li>
-          <li><a href="#">Qui sommes-nous</a></li>
-          <li><a href="#">Contactez nous</a></li>
-          <li><a href="#">Mon compte</a></li>
-        
-            <div class="reseaux-sociaux">
-              <li><a href="https://www.facebook.com/"><img src="./images/fb.png" alt="facebook"></a></li>
-              <li><a href="https://www.instagram.com/"><img src="./images/insta.png" alt="instagram"></a></li>
-              <li><a href="https://www.youtube.com/"><img src="./images/youtube.png" alt="youtube"></a></li>
-              <li><a href="#"><img src="./images/tel.png" alt="youtube"></a></li>
-            </div>
-          </ul>
-       
-
-      </div>
-    </nav>
-  </div>
-
-  <!-- ******** -->
-  <!-- nav en large -->
-  <div class="main-nav-large container">
-    <nav id="main-nav">
-      <ul>
-        <li><a href="#">Nos aventures</a></li>
-        <li><a href="#">Inspirations</a></li>
-        <li><a href="#"><img src="./images/logo_aztrek_logo_aztrek_noir.svg" alt="logo aztrek" width="140" height="48"></a></li>
-        <li><a href="#">Sur mesure</a></li>
-        <li><a href="#">Qui sommes-nous ?</a></li>
-      </ul>
-    </nav>
-  </div>
+?>
 
 
 
@@ -77,46 +13,11 @@
     <video autoplay muted loop src="./medias/Video_aztrek2.mp4"></video>
   </header>
 
-  <!-- nav secondaire -->
-  <div id="second-nav">
-    <div class="container">
-      <!-- <div class="mobile-nav-sec">
-        <nav>
-          <div>
-            <div class="menu-toggle"><span>Menu</span>
-            </div>
-            <ul class="menu">
-              <li><a href="#">Accueil</a></li>
-              <li><a href="#">Nos aventures</a></li>
-              <li><a href="#">Inspirations</a></li>
-              <li><a href="#">Sur mesure</a></li>
-              <li><a href="#">Qui sommes-nous</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div> -->
-      <form class="moteur-recherche" action="#">
-        <input class="input-recherche" type="text" name="rechercher" id="recherche" placeholder="Rechercher">
-        <input class="valid-recherche" type="submit" value="OK">
-      </form>
-      <nav class="reseaux-sociaux">
-        <ul>
-          <li><a href="https://www.facebook.com/"><img src="./images/fb.png" alt="facebook"></a></li>
-          <li><a href="https://www.instagram.com/"><img src="./images/insta.png" alt="instagram"></a></li>
-          <li><a href="https://www.youtube.com/"><img src="./images/youtube.png" alt="youtube"></a></li>
-          <li><a href="#"><img src="./images/tel.png" alt="youtube"></a></li>
-        </ul>
-      </nav>
-      <nav id="compte-contact">
-        <ul>
-          <li><a href="#">Mon compte</a></li>
-          <li><a href="#">Contactez nous</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <!-- ******** -->
+<?php
 
+require_once "layout/second_menu.php";
+
+?>
   <main>
     <div class="container small-container">
       <h1 class="titre-logo">
@@ -250,38 +151,4 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="newsletter">
-        <p>Restons en contact</p>
-        <form action="#">
-          <input class="mail" type="text" placeholder="votre adresse mail">
-          <input class="valid-mail" type="submit" value="ok">
-          </form>
-      </div>
-      <div class="logo-blanc">
-        <img src="./images/logo_aztrek_blanc.png" alt="logo aztrek blanc">
-      </div>
-      <a class="tel" href="#">02.65.98.54.25</a>
-      <nav class="reseaux-sociaux">
-        <ul>
-          <li><a href="https://www.facebook.com/"><img src="./images/fb.png" alt="facebook"></a></li>
-          <li><a href="https://www.instagram.com/"><img src="./images/insta.png" alt="instagram"></a></li>
-          <li><a href="https://www.youtube.com/"><img src="./images/youtube.png" alt="youtube"></a></li>
-        </ul>
-      </nav>
-      <p>Mail <br>Adresse <br>Ville</p>
-      <div class="mentions">
-        <a href="#">CGV</a>
-        <a href="#">Mentions légales</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/scripts.js"></script>
-
-</body>
-
-</html>
+<?php require_once "layout/footer.php";?>
