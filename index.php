@@ -13,11 +13,8 @@ require_once "layout/main_menu.php";
     <video autoplay muted loop src="./medias/Video_aztrek2.mp4"></video>
   </header>
 
-<?php
+<?php require_once "layout/second_menu.php"; ?>
 
-require_once "layout/second_menu.php";
-
-?>
   <main>
     <div class="container small-container">
       <h1 class="titre-logo">

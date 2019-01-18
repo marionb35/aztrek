@@ -16,7 +16,7 @@
         <nav id="compte-contact">
             <ul>
                 <li><a href="#">Mon compte</a></li>
-                <li><a href="#">Contactez nous</a></li>
+                <li><a href="contact.php">Contactez nous</a></li>
             </ul>
         </nav>
     </div>

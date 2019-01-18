@@ -1185,4 +1185,261 @@ footer .container .mentions {
   }
 }
 
+.section_temoignages {
+  background: url("../images/Fotolia_80149543_Subscription_Monthly_M.jpg") no-repeat;
+  background-size: cover;
+  padding: 70px 0 150px;
+  position: relative;
+}
+
+.section_temoignages h2 {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.section_temoignages .temoignages_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_temoignages article {
+  background-color: rgba(255, 255, 255, 0.824);
+  flex-basis: 32%;
+  padding: 20px;
+}
+
+.section_temoignages article h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #da2c38;
+}
+
+.section_temoignages article p {
+  color: #542d25;
+  font-size: 0.875rem;
+}
+
+.section_temoignages .cta {
+  position: absolute;
+  background-color: #ffa630;
+  padding: 15px 5px;
+  border: white solid 2px;
+  z-index: 2;
+  bottom: 50px;
+  left: calc(50% - 110px);
+  display: block;
+  font-size: 1rem;
+  color: white;
+}
+
+/* --------------------------------
+-------PRESENTATION SEJOUR--------
+-------------------------------- */
+.page_sejour .section_presentation {
+  padding: 80px 50px;
+}
+
+.page_sejour .section_presentation p {
+  padding: 0px 100px;
+}
+
+.page_sejour .section_presentation h1 {
+  margin-bottom: 40px;
+}
+
+.page_sejour .section_presentation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.page_sejour .section_presentation ul li {
+  margin: 0 40px;
+  height: 40px;
+  padding: 5px 0;
+}
+
+.page_sejour .section_presentation ul li:first-of-type {
+  background: url("../images/calendar.png") no-repeat;
+  background-size: contain;
+  padding: 15px 50px;
+}
+
+.page_sejour .section_presentation ul li:last-of-type {
+  background: url("../images/euro.png") no-repeat;
+  background-size: contain;
+  padding: 15px 50px;
+}
+
+/* --------------------------------
+-------VOUS APPRECIEREZ------------
+-------------------------------- */
+.section_apprecierez {
+  background: url("../images/mur_jaune.jpg") no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.section_apprecierez h2 {
+  margin-bottom: 30px;
+}
+
+.apprecierez_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.apprecierez_container article {
+  display: flex;
+  align-items: center;
+  flex-basis: 48%;
+  margin: 20px 0;
+}
+
+.apprecierez_container img {
+  width: 50px;
+}
+
+.apprecierez_container p {
+  margin: 0 20px;
+}
+
+.section_apprecierez .cta {
+  background-color: #804531;
+  font-size: 1rem;
+  color: white;
+  padding: 15px 25px;
+  border: white solid 2px;
+  margin: 40px auto 20px;
+}
+
+/* ---------------------
+-------CARTE------------
+---------------------- */
+.carte_sejour img {
+  width: 100%;
+}
+
+/* ---------------------
+-------ITINERAIRE-------
+---------------------- */
+.itineraire {
+  margin: 80px 0;
+}
+
+.itineraire .jour {
+  display: flex;
+  margin: 20px 0;
+  align-items: flex-start;
+}
+
+.itineraire article {
+  flex-basis: 75%;
+  padding-right: 20px;
+}
+
+.itineraire h5 {
+  margin-top: 0;
+}
+
+.itineraire img {
+  border: #ffa630 solid 2px;
+  width: 240px;
+  height: 240px;
+}
+
+.itineraire ul {
+  list-style: inherit;
+  padding: 0 40px;
+}
+
+.itineraire .cta {
+  background-color: #804531;
+  font-size: 1rem;
+  color: white;
+  padding: 15px 25px;
+  border: white solid 2px;
+  margin: 40px auto 20px;
+}
+
+/* ------------------------------
+-------AUTRE DESTINATIONS--------
+------------------------------ */
+.page_sejour .section_destinations {
+  background: url("../images/bg_autres_dest.jpg") no-repeat;
+  width: 100%;
+  background-position: center;
+  padding: 100px 0 100px;
+}
+
+/* ----------------------------------------------------------
+----------------------PAGE CONTACT---------------------------
+---------------------------------------------------------- */
+.page_contact .section_contact {
+  background: url("../images/dans-vie-des-cactus.jpg") no-repeat;
+  padding-top: 98px;
+}
+
+.page_contact .cadre {
+  margin: 70px 213px;
+}
+
+.section_contact h2 {
+  margin: 20px 0 50px;
+}
+
+.section_contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section_contact input,
+.section_contact textarea {
+  height: 50px;
+  padding-left: 5px;
+  color: #804531;
+  font-size: 1rem;
+  border: #804531 solid 1px;
+}
+
+.section_contact input {
+  width: 200px;
+  padding: 0 10px;
+}
+
+.section_contact textarea {
+  flex-basis: 100%;
+  margin: 20px 0;
+  height: 350px;
+  padding: 10px;
+}
+
+.section_contact input::placeholder, .section_contact textarea::placeholder {
+  font-family: arial, sans-serif;
+  color: #804531;
+  font-size: 1rem;
+}
+
+.section_contact .cta {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #804531;
+  font-size: 1rem;
+  text-align: center;
+  padding-left: 10px;
+  display: block;
+  cursor: pointer;
+  border: #fff solid 1px;
+  margin: 20px auto;
+}
+
+.page_contact .section_destinations h2 {
+  margin: 20px 0 50px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
 /*# sourceMappingURL=main.css.map */

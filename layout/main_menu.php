@@ -6,12 +6,12 @@
             <div class="menu-toggle"><span>Menu</span>
             </div>
             <ul class="menu">
-                <li><a href="#">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="sejour.php">Nos aventures</a></li>
-                <li><a href="#">Inspirations</a></li>
-                <li><a href="#">Sur mesure</a></li>
-                <li><a href="#">Qui sommes-nous</a></li>
-                <li><a href="#">Contactez nous</a></li>
+                <li><a href="index.php">Inspirations</a></li>
+                <li><a href="contact.php">Sur mesure</a></li>
+                <li><a href="agence.php">Qui sommes-nous</a></li>
+                <li><a href="contact.php">Contactez nous</a></li>
                 <li><a href="#">Mon compte</a></li>
 
                 <div class="reseaux-sociaux">
@@ -32,11 +32,11 @@
 <div class="main-nav-large container">
     <nav id="main-nav">
         <ul>
-            <li><a href="#">Nos aventures</a></li>
-            <li><a href="#">Inspirations</a></li>
-            <li><a href="#"><img src="./images/logo_aztrek_logo_aztrek_noir.svg" alt="logo aztrek" width="140" height="48"></a></li>
-            <li><a href="#">Sur mesure</a></li>
-            <li><a href="#">Qui sommes-nous ?</a></li>
+            <li><a href="sejour.php">Nos aventures</a></li>
+            <li><a href="index.php">Inspirations</a></li>
+            <li><a href="index.php"><img src="./images/logo_aztrek_logo_aztrek_noir.svg" alt="logo aztrek" width="140" height="48"></a></li>
+            <li><a href="contact.php">Sur mesure</a></li>
+            <li><a href="agence.php">Qui sommes-nous ?</a></li>
         </ul>
     </nav>
 </div>

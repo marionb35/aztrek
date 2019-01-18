@@ -1,0 +1,72 @@
+/* ----------------------------------------------------------
+----------------------PAGE CONTACT---------------------------
+---------------------------------------------------------- */
+
+.page_contact .section_contact {
+  background: url('../images/dans-vie-des-cactus.jpg') no-repeat;
+  padding-top: 98px;
+}
+
+.page_contact .cadre {
+  margin: 70px 213px;
+}
+
+.section_contact h2 {
+  margin: 20px 0 50px;
+}
+
+.section_contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section_contact input,
+.section_contact textarea {
+  height: 50px;
+  padding-left: 5px;
+  color: #804531;
+  font-size: 1rem;
+  border: #804531 solid 1px;
+
+}
+
+.section_contact input{
+  width: 200px;
+  padding: 0 10px;
+}
+
+.section_contact textarea {
+  flex-basis: 100%;
+  margin: 20px 0;
+  height: 350px;
+  padding: 10px;
+}
+
+.section_contact input::placeholder, .section_contact textarea::placeholder{
+  font-family: arial, sans-serif;
+  color: #804531;
+  font-size: 1rem;
+}
+
+
+.section_contact .cta {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #804531;
+  font-size: 1rem;
+  text-align: center;
+  padding-left: 10px;
+  display: block;
+  cursor: pointer;
+  border: #fff solid 1px;
+  margin: 20px auto;
+}
+
+.page_contact .section_destinations h2 {
+  margin: 20px 0 50px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+
+}

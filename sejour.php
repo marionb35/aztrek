@@ -13,6 +13,8 @@ require_once "layout/main_menu.php";
     <a class="cta" href="contact.html">Partez avec nous</a>
 </div>
 
+<?php require_once "layout/second_menu.php"; ?>
+
 <main class="section_presentation">
     <article class="container">
         <h1>Les trésors du Yucatán</h1>
