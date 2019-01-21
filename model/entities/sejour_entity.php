@@ -1,6 +1,6 @@
 <?php
 
-function getAllSejours(int $limit = 999) : array
+function getAllSejoursByPays(int $id) : array
 {
     global $connection;
 
@@ -9,17 +9,21 @@ function getAllSejours(int $limit = 999) : array
     pays.libelle AS pays,
            sejour.titre,
            sejour.description_courte,
-           CONCAT(sejour.duree, ' jours') AS duree_jour,
+           CONCAT(sejour.duree, ' jours') AS duree,
            sejour.image,
            sejour.carte,
-           depart.date_depart,
-           depart.prix
+           MIN(depart.date_depart) AS min_depart,
+           MIN(depart.prix) AS min_prix
     FROM sejour
 INNER JOIN pays on sejour.pays_id = pays.id
 LEFT JOIN depart on sejour.id = depart.sejour_id
+WHERE pays.id = :id
+    AND depart.date_depart > NOW()
+GROUP BY sejour.id
     ";
 
     $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id",$id);
     $stmt->execute();
 
     return $stmt->fetchAll();

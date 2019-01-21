@@ -7,7 +7,7 @@
             </div>
             <ul class="menu">
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="pays.php">Nos aventures</a></li>
+                <li><a href="destinations.php">Nos aventures</a></li>
                 <li><a href="index.php">Inspirations</a></li>
                 <li><a href="contact.php">Sur mesure</a></li>
                 <li><a href="agence.php">Qui sommes-nous</a></li>
@@ -32,7 +32,7 @@
 <div class="main-nav-large container">
     <nav id="main-nav">
         <ul>
-            <li><a href="pays.php">Nos aventures</a></li>
+            <li><a href="destinations.php">Nos aventures</a></li>
             <li><a href="index.php">Inspirations</a></li>
             <li><a href="index.php"><img src="./images/logo_aztrek_logo_aztrek_noir.svg" alt="logo aztrek" width="140" height="48"></a></li>
             <li><a href="contact.php">Sur mesure</a></li>

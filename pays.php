@@ -1,9 +1,14 @@
 <?php
 require_once "model/database.php";
+require_once "functions.php";
 
-$sejours = getAllSejours(10);
+$sejours = getAllSejoursByPays(10);
+$id = $_GET["id"];
+$pays = getOneEntity("pays","$id");
 
-require_once "layout/header.php";
+getHeader("Pays", "Nos séjours par pays");
+
+
 require_once "layout/main_menu.php";
 
 ?>
@@ -12,52 +17,27 @@ require_once "layout/main_menu.php";
 <?php require_once "layout/second_menu.php"; ?>
 
 <main class="section_presentation">
-    <article class="container">
-        <ul class="liste_pays">
-            <li><a href="#">Mexique</a></li>
-            <li><a href="#">Guatemala</a></li>
-            <li><a href="#">Salvador</a></li>
-            <li><a href="#">Honduras</a></li>
-            <li><a href="#">Costa Rica</a></li>
-        </ul>
-
-    </article>
-
 
         <div class="container">
-            <h2>Mexique</h2>
+            <h2><?= $pays ;?></h2>
 
             <div class="destinations_container">
-
+<?php foreach ($sejours as $sejour) : ?>
                 <div class="overlay-image overlay"><a href="sejour2.html">
                         <img class="image" src="./images/puebla.jpg" alt="puebla" />
                         <div class="normal">
-                            <div class="text">Caminando Mexico</div>
-                            <div class="jours">5 jours</div>
+                            <div class="text"><?= $sejour["titre"] ; ?></div>
+                            <div class="jours"><?= $sejour["duree"] ; ?></div>
                             <div class="difficulte"><img src="./images/chaussures_blanc_2.png" alt="difficulté 1"></div>
                         </div>
-                        <div class="hover">
-                            <img class="image" src="./images/bg_rollover_sejour2.jpg" alt="carte sejour1" />
-                            <div class="text">Caminando Mexico</div>
-                            <div class="cta">Partez avec nous</div>
-                        </div>
+<!--                        <div class="hover">-->
+<!--                            <img class="image" src="./images/bg_rollover_sejour2.jpg" alt="carte sejour1" />-->
+<!--                            <div class="text">Caminando Mexico</div>-->
+<!--                            <div class="cta">Partez avec nous</div>-->
+<!--                        </div>-->
                     </a>
                 </div>
-                <div class="overlay-image overlay">
-                    <a href="sejour3.html">
-                        <img class="image" src="./images/popo.jpg" alt="popo" />
-                        <div class="normal">
-                            <div class="text">Les volcans</div>
-                            <div class="jours">7 jours</div>
-                            <div class="difficulte"><img src="./images/chaussures_blanc_3.png" alt="difficulté 1"></div>
-                        </div>
-                        <div class="hover">
-                            <img class="image" src="./images/bg_rollover_sejour3.jpg" alt="carte sejour1" />
-                            <div class="text">Les volcans</div>
-                            <div class="cta">Partez avec nous</div>
-                        </div>
-                    </a>
-                </div>
+<?php endforeach; ?>
             </div>
         </div>
 
