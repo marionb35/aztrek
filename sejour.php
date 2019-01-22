@@ -1,33 +1,45 @@
 <?php
+require_once "model/database.php";
+require_once "functions.php";
 
-require_once "layout/header.php";
+$id = $_GET["id"];
+$sejour = getOneSejour($id);
+$departs = getAllDepartsBySejour($id);
+$prix_min = ROUND(MIN($departs["prix"]));
+$liste_jours = getAllProgrammeBySejour($id);
+
+getHeader("Séjour", "votre séjour");
+
+
 require_once "layout/main_menu.php";
-
-
 ?>
 
 
 
 <div class="section_slider">
-    <img src="./images/chichen_itza_slider.jpg" alt="puebla">
-    <a class="cta" href="contact.html">Partez avec nous</a>
+    <img src="uploads/<?= $sejour["image"] ; ?>" alt="<?= $sejour["titre"] ; ?>">
 </div>
 
 <?php require_once "layout/second_menu.php"; ?>
 
 <main class="section_presentation">
     <article class="container">
-        <h1>Les trésors du Yucatán</h1>
+        <h1><?= $sejour['titre'] ; ?></h1>
         <ul>
-            <li>6 jours</li>
-            <li><img src="./images/chaussures_marron_1.png" alt="difficulté"></li>
-            <li>à partir de 3290 €</li>
+            <li><?= $sejour['duree'] ; ?></li>
+            <li>
+                <?php for ($i =1; $i <=5; $i++) : ?>
+                <?php if ($i <= $sejour["difficulte"]) : ?>
+        <img src="chaussures pleine" alt="">
+    <?php else: ?>
+        <img src="chaussures vide" alt="">
+<?php endif; ?>
+<?php endfor; ?>
+        </li>
+            <li><img src="./images/chaussures_marron_<?= $sejour['difficulte'] ; ?>.png" alt="<?= $sejour['difficulte_nom'] ; ?>"></li>
+            <li>à partir de <?= $prix_min ; ?> €</li>
         </ul>
-        <p>Le Mexique, et en particulier le Yucatán, est une terre de rêve. Elle y mêle quelques-uns des plus beaux
-            sites mayas, riche patrimoine culturel, et des trésors naturels, comme la mer des Caraïbes ou les
-            cenotes, ces puits souterrains ou à ciel ouvert, trous d’eau qui parsèment le plateau calcaire du
-            Yucatán. L’âme indienne y est bien vivante, celle de la civilisation raffinée des Mayas à leur grande
-            époque bien sûr, mais également celle des Mayas d’aujourd’hui, qui ont gardé leurs us et coutumes.
+        <p><?= $sejour['description_longue'] ; ?>
         </p>
 
     </article>
@@ -59,122 +71,56 @@ require_once "layout/main_menu.php";
 </div>
 
 <div class="carte_sejour">
-    <img src="./images/CarteMexique_1.jpg" alt="carte sejour 1">
+    <img src="uploads/<?= $sejour["carte"] ; ?>" alt="<?= $sejour["titre"] ; ?>">
 </div>
 
 <div class="itineraire">
     <h2>Itinéraire</h2>
     <div class="article_container container">
+<?php foreach ($liste_jours as $jour) : ?>
         <div class="jour">
             <article>
-                <h5>J1 : Vol pour Cancún
-                </h5>
-                <p>Vol pour Cancún.
+                <h5>J<?= $jour["numero_jour"] ; ?> : <?= $jour["titre"] ; ?></h5>
+                <p><?= $jour["description"] ; ?>
                 </p>
-            </article>
-
-            <img src="./images/sejour1/s1_j1.jpg" alt="jour1">
-
-        </div>
-        <div class="jour">
-            <article>
-                <h5>J2 : Cancún - Coba - Valladolid</h5>
-                <p>Accueil à l'aéroport par notre guide et route jusqu’à Coba, agréable site maya dont les ruines
-                    sont
-                    dispersées dans la forêt. Nous enfourchons nos vélos et partons sur de larges "sacbe", les
-                    anciennes routes mayas, pour une découverte dynamique et divertissante de l'ancienne cité (2h
-                    de
-                    vélo avec pauses). De nombreux arrêts viennent ponctuer la balade, notamment la "Grande
-                    Pyramide"
-                    au sommet de laquelle on bénéficie d’une vue imprenable sur la forêt environnante et les cinq
-                    lacs.
-                    Transfert à Valladolid en fin d’après-midi et installation dans un charmant hôtel colonial
-                    donnant
-                    sur le parc central. Promenade en ville et temps libre avant le dîner.
-                </p>
+               <?php if ($jour["hebergement"] && $jour["transfert"]) : ?>
                 <ul>
-                    <li>Heures de marche : 1h</li>
-                    <li>Hébergement : en hôtel
+                    <li>
+                        <?php if ($jour["hebergement"])
+                        echo $jour["hebergement"] ; ?>
                     </li>
-                    <li>Transfert : Véhicule privatisé, entre 3h et 3h30</li>
+                    <li><?php if ($jour["transfert"])
+                            echo $jour["transfert"] ; ?></li>
                 </ul>
+    <?php endif; ?>
             </article>
-            <img src="./images/sejour1/s1_j2.jpg" alt="jour2">
+            <img src="uploads/<?= $jour["image"] ; ?>" alt="jour <?= $jour["numero_jour"] ; ?>">
         </div>
-        <div class="jour">
-            <article>
-                <h5>J3 : Valladolid - Chichen Itza (site maya) - Izamal, ville coloniale</h5>
-                <p>Visite matinale de Chichen Itza, pour profiter de la fraîcheur et d'une fréquentation moins
-                    intense
-                    qu'en fin de matinée. Ce site, certainement le plus célèbre et le plus spectaculaire du
-                    Yucatán, a
-                    été bâti par les Mayas, mais n'a connu son véritable essor que sous l’impulsion des Toltèques.
-                    La
-                    cité que l’on observe aujourd’hui est le fruit de cette rencontre, et révèle une architecture
-                    monumentale dont les bas-reliefs représentent souvent les récits des sacrifices humains.
-                </p>
-                <ul>
-                    <li>Hébergement : en hôtel</li>
-                    <li>Transfert : Véhicule privatisé, entre 1h30 et 2h</li>
-                </ul>
-            </article>
-            <img src="./images/sejour1/s1_j3.jpg" alt="jour3">
-        </div>
-        <div class="jour">
-            <article>
-                <h5>J4 : Izamal - Chunkanan (baignade en cenote) - Mérida</h5>
-                <p>Le Yucatán est la terre des "cenotes", ces puits naturels produits par l’effondrement de
-                    terrains
-                    calcaires situés au-dessus d’un réseau de rivières souterraines. Ils se sont formés il y a des
-                    millions d’années lorsque une météorite a percuté la Terre et provoqué un véritable cataclysme.
-                    Nous allons découvrir les cenotes de Chunkanan, qui se distinguent par leur accès original :
-                    départ
-                    en carriole tirée par des mules, comme le faisaient à l’époque les ouvriers agricoles pour
-                    acheminer le sisal vers l’hacienda. Baignade et pique-nique en pleine nature avant de
-                    poursuivre
-                    vers Mérida, la capitale du Yucatán. Cette dernière a conservé son charme colonial, grâce à la
-                    présence de nombreux édifices coloniaux et d’agréables petites places ombragées.
-                </p>
-                <ul>
-                    <li>Hébergement : en hôtel</li>
-                    <li>Transfert : Véhicule privatisé, entre 2h et 2h30</li>
-                </ul>
-            </article>
-            <img src="./images/sejour1/s1_j4.jpg" alt="jour4">
-        </div>
-        <div class="jour">
-            <article>
-                <h5>J5 : Mérida - Hacienda Ochil - San Antonio Mulix (vélo et baignade) - Santa Elena</h5>
-                <p>Visite en début de matinée du marché coloré de Mérida, connu pour ses authentiques panamas et
-                    ses
-                    délicates tuniques finement brodées, et départ pour une journée d’immersion dans le Yucatán
-                    profond. Découverte de l’hacienda San Pedro Ochil, merveilleusement restaurée. Les haciendas
-                    ont
-                    tenu jusqu’au XIXe un rôle central dans l'économie régionale, et sont indissociables de
-                    l’histoire
-                    du Yucatán. C’est dans ces grandes propriétés que l’on élaborait la fibre connue sous le nom de
-                    “sisal“, qui servait notamment à la fabrication de cordages.
-                </p>
-                <ul>
-                    <li>Hébergement : chez l'habitant</li>
-                    <li>Transfert : Véhicule privatisé, 2h</li>
-                </ul>
-            </article>
-            <img src="./images/sejour1/s1_j5.jpg" alt="jour5">
-        </div>
-        <div class="jour">
-            <article>
-                <h5>J6 : Playa del Carmen - Cancún - vol de retour</h5>
-                <p>Suivant l’horaire du vol, court transfert à l’aéroport de Cancún. Vol international retour.
-                    Repas
-                    libres.
-                </p>
-            </article>
-            <img src="./images/sejour1/s1_j6.jpg" alt="jour6">
-        </div>
+ <?php endforeach; ?>
         <a class="cta" href="contact.html">Réservez</a>
     </div>
 </div>
+
+    <div class="departs">
+        <h2>Prochains départs</h2>
+        <div class="container">
+
+                <table>
+                    <tr>
+                        <th>Date de départ</th>
+                        <th>Prix</th>
+                    </tr>
+                    <?php foreach ($departs as $depart) : ?>
+                    <tr>
+                        <td><?= $depart["date_depart"] ; ?></td>
+                        <td><?= $depart["prix"] ; ?> €</td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+
+            <a class="cta" href="contact.html">Réservez</a>
+        </div>
+    </div>
 
 
 

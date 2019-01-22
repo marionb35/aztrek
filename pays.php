@@ -2,9 +2,9 @@
 require_once "model/database.php";
 require_once "functions.php";
 
-$sejours = getAllSejoursByPays(10);
 $id = $_GET["id"];
-$pays = getOneEntity("pays","$id");
+$sejours = getAllSejoursByPays($id);
+$pays = getOneEntity("pays",$id);
 
 getHeader("Pays", "Nos séjours par pays");
 
@@ -19,22 +19,17 @@ require_once "layout/main_menu.php";
 <main class="section_presentation">
 
         <div class="container">
-            <h2><?= $pays ;?></h2>
+            <h2><?= $pays["libelle"] ;?></h2>
 
             <div class="destinations_container">
 <?php foreach ($sejours as $sejour) : ?>
-                <div class="overlay-image overlay"><a href="sejour2.html">
-                        <img class="image" src="./images/puebla.jpg" alt="puebla" />
+                <div class="overlay-image overlay"><a href="sejour.php?id=<?= $sejour["id"]; ?>">
+                        <img class="image" src="uploads/<?= $sejour['image'] ; ?>" alt="<?= $sejour['titre'] ; ?>" />
                         <div class="normal">
                             <div class="text"><?= $sejour["titre"] ; ?></div>
                             <div class="jours"><?= $sejour["duree"] ; ?></div>
-                            <div class="difficulte"><img src="./images/chaussures_blanc_2.png" alt="difficulté 1"></div>
+                            <div class="difficulte"><img src="./images/chaussures_blanc_<?= $sejour['difficulte'] ; ?>.png" alt="<?= $sejour['difficulte_nom'] ; ?>"></div>
                         </div>
-<!--                        <div class="hover">-->
-<!--                            <img class="image" src="./images/bg_rollover_sejour2.jpg" alt="carte sejour1" />-->
-<!--                            <div class="text">Caminando Mexico</div>-->
-<!--                            <div class="cta">Partez avec nous</div>-->
-<!--                        </div>-->
                     </a>
                 </div>
 <?php endforeach; ?>
