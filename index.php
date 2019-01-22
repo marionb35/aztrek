@@ -3,7 +3,6 @@
 require_once "model/database.php";
 require_once "functions.php";
 
-$id = $_GET["id"];
 $coup_de_coeur = getOneCoupDeCoeur();
 $promo = getOnePromo();
 
@@ -48,16 +47,16 @@ getSecondMenu();
                     <p><?= $coup_de_coeur['description_courte'] ; ?></p>
                     <div class="points-cles">
                         <h6><?= $coup_de_coeur['duree'] ; ?></h6>
-                        <h6 class="chaussures">
-                            <ul>
-                                <li>
+                        <h6 class="difficulte">
+                                <div class="chaussures">
                                     <?php for ($i =1; $i <=5; $i++) : ?>
                                     <?php if ($i <= $coup_de_coeur["difficulte"]) : ?>
-                                        <img src="chaussures pleine" alt="">
+                                        <img src="uploads/chaussure_pleine.png" alt="">
                                     <?php else: ?>
-                                        <img src="chaussures vide" alt="">
+                                        <img src="uploads/chaussure_vide.png" alt="">
                                     <?php endif; ?>
-                            <?php endfor; ?></h6>
+                            <?php endfor; ?></div>
+                        </h6>
                         <h6>A partir de ><?= $coup_de_coeur['min_prix'] ; ?> €</h6>
                     </div>
                     <a href="sejour.php?id=<?= $coup_de_coeur["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
