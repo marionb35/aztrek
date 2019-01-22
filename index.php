@@ -3,6 +3,9 @@
 require_once "model/database.php";
 require_once "functions.php";
 
+$id = $_GET["id"];
+$coup_de_coeur = getOneCoupDeCoeur();
+$promo = getOnePromo();
 
 getHeader("Accueil", "Spécialiste de l'amerique latine");
 getMainMenu();
@@ -34,47 +37,69 @@ getSecondMenu();
         </div>
     </main>
 
-    <section id="coupcoeur" class="voyage">
+    <section style="background: url(uploads/<?= $coup_de_coeur['image'] ; ?>) center no-repeat;
+    background-size: cover;">
+        <div class="voyage" >
         <div class="container">
             <div class="cadre-blanc">
                 <article>
                     <h3>Notre Coup de coeur</h3>
-                    <h4 class="medium">Tropiques rafraichissants <br>COSTA RICA </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt optio dolore aut
-                        distinctio?
-                        Error nobis quo harum voluptatem obcaecati?</p>
+                    <h4 class="medium"><?= $coup_de_coeur['titre'] ; ?><br><?= $coup_de_coeur['pays'] ; ?></h4>
+                    <p><?= $coup_de_coeur['description_courte'] ; ?></p>
                     <div class="points-cles">
-                        <h6>7 jours</h6>
-                        <h6 class="difficulte">difficulté 2 sur 5</h6>
-                        <h6>1290 €</h6>
+                        <h6><?= $coup_de_coeur['duree'] ; ?></h6>
+                        <h6 class="chaussures">
+                            <ul>
+                                <li>
+                                    <?php for ($i =1; $i <=5; $i++) : ?>
+                                    <?php if ($i <= $coup_de_coeur["difficulte"]) : ?>
+                                        <img src="chaussures pleine" alt="">
+                                    <?php else: ?>
+                                        <img src="chaussures vide" alt="">
+                                    <?php endif; ?>
+                            <?php endfor; ?></h6>
+                        <h6>A partir de ><?= $coup_de_coeur['min_prix'] ; ?> €</h6>
                     </div>
-                    <a href="#" class="cta cta-vert">Je pars à l'aventure</a>
+                    <a href="sejour.php?id=<?= $coup_de_coeur["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
                 </article>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section style="background: url(uploads/<?= $promo['image'] ; ?>) center no-repeat;
+            background-size: cover;">
+        <div class="voyage">
+            <div class="container">
+                <div class="cadre-blanc">
+                    <article>
+                        <h3>Notre Coup de coeur</h3>
+                        <h4 class="medium"><?= $promo['titre'] ; ?><br><?= $promo['pays'] ; ?></h4>
+                        <p><?= $promo['description_courte'] ; ?></p>
+                        <div class="points-cles">
+                            <h6><?= $promo['duree'] ; ?></h6>
+                            <h6>
+                                <ul>
+                                    <li class="chaussures">
+                                        <?php for ($i =1; $i <=5; $i++) : ?>
+                                        <?php if ($i <= $promo["difficulte"]) : ?>
+                                            <img src="uploads/chaussure_pleine.png" alt="">
+                                        <?php else: ?>
+                                            <img src="uploads/chaussure_vide.png" alt="">
+                                        <?php endif; ?>
+                                <?php endfor; ?></h6>
+                            <h6>A partir de ><?= $promo['min_prix'] ; ?> €</h6>
+                        </div>
+                        <a href="sejour.php?id=<?= $promo["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="promo" class="voyage">
-        <div class="container">
-            <div class="cadre-blanc">
-                <article>
-                    <h3>Notre Promo</h3>
-                    <h4 class="medium">Caminando Mexico <br>MEXIQUE </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt optio dolore aut
-                        distinctio?
-                        Error nobis quo harum voluptatem obcaecati?</p>
-                    <div class="points-cles">
-                        <h6>7 jours</h6>
-                        <h6 class="difficulte">difficulté 2 sur 5</h6>
-                        <h6>1290 €</h6>
-                    </div>
-                    <a href="#" class="cta cta-vert">Je pars à l'aventure</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="depart-immediat" class="voyage">
+    <section style="background: url(uploads/image_sejour_6.jpg) center no-repeat;
+            background-size: cover;">
+        <div class="voyage">
         <div class="container">
             <div class="cadre-blanc">
                 <article>
@@ -91,6 +116,7 @@ getSecondMenu();
                     <a href="#" class="cta cta-vert">Je pars à l'aventure</a>
                 </article>
             </div>
+        </div>
         </div>
     </section>
 

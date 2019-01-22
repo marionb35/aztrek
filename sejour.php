@@ -28,16 +28,15 @@ getMainMenu();
         <h1><?= $sejour['titre'] ; ?></h1>
         <ul class="caracteristiques">
             <li><?= $sejour['duree'] ; ?></li>
-            <li>
+            <li class="chaussures">
                 <?php for ($i =1; $i <=5; $i++) : ?>
                 <?php if ($i <= $sejour["difficulte"]) : ?>
-        <img src="chaussures pleine" alt="">
+        <img src="uploads/chaussure_pleine.png" alt="">
     <?php else: ?>
-        <img src="chaussures vide" alt="">
+        <img src="uploads/chaussure_vide.png" alt="">
 <?php endif; ?>
 <?php endfor; ?>
         </li>
-            <li><img src="./images/chaussures_marron_<?= $sejour['difficulte'] ; ?>.png" alt="<?= $sejour['difficulte_nom'] ; ?>"></li>
             <li>à partir de <?= $prix_min ; ?> €</li>
         </ul>
         <p><?= $sejour['description_longue'] ; ?>

@@ -458,6 +458,9 @@ a {
 .cadre-blanc {
   background-color: rgba(255, 255, 255, 0.8); }
 
+.chaussures {
+  display: flex; }
+
 @font-face {
   font-family: 'bebas_neuebold';
   src: url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff");
@@ -742,16 +745,12 @@ main {
     main .container p {
       margin: 40px auto; }
 
-#coupcoeur {
-  background: url(../images/asap-story-750215-unsplash_miroir.jpg) center no-repeat;
-  background-size: cover; }
-
 #promo {
   background: url(../images/karla-lopez-596646-unsplash.jpg) center no-repeat;
   background-size: cover; }
 
 #depart-immediat {
-  background: url(../images/cameron-wilkins-487426-unsplash.jpg) center no-repeat;
+  background: url(images/cameron-wilkins-487426-unsplash.jpg) center no-repeat;
   background-size: cover; }
 
 .voyage {
