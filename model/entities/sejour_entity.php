@@ -97,6 +97,25 @@ function getAllProgrammeBySejour(int $id): array
     return $stmt->fetchAll();
 }
 
+function getAllPointsClesBySejour(int $id): array
+{
+    global $connection;
+
+    $query = "
+    SELECT 
+        *
+    FROM point_cle
+    left join sejour_has_point_cle shpc on point_cle.id = shpc.point_cle_id
+    WHERE shpc.sejour_id = :id
+    ";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
 function insertRecette(string $titre, int $categorie_id, string $image, string $description, string $description_courte, int $couverts, string $temps_prepa, string $temps_cuisson, int $publie, int $utilisateur_id)
 {
     global $connection;

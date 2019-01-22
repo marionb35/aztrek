@@ -9,6 +9,18 @@ function debug($var, bool $die = true) {
     }
 }
 
+function getCurrentUser(){
+    //Démarrer la session si pas encore démarrée
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    // Récupérer l'utilisateur en cours si connecté
+    if (isset($_SESSION['id'])) {
+        return getOneEntity('utilisateur', $_SESSION['id']);
+    }
+    return null;
+}
+
 /**
  * Affiche le contenu du fichier header.php
  * @param string $title Titre de la page
@@ -18,8 +30,12 @@ function getHeader(string $title, string $description, array $stylesheets = []) 
     require_once 'layout/header.php';
 }
 
-function getMenu() {
-    require_once 'layout/menu.php';
+function getMainMenu() {
+    require_once 'layout/main_menu.php';
+}
+
+function getSecondMenu() {
+    require_once 'layout/second_menu.php';
 }
 
 function getFooter() {

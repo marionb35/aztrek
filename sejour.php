@@ -7,11 +7,12 @@ $sejour = getOneSejour($id);
 $departs = getAllDepartsBySejour($id);
 $prix_min = ROUND(MIN($departs["prix"]));
 $liste_jours = getAllProgrammeBySejour($id);
+$liste_points_cles = getAllPointsClesBySejour($id);
 
 getHeader("Séjour", "votre séjour");
 
 
-require_once "layout/main_menu.php";
+getMainMenu();
 ?>
 
 
@@ -20,12 +21,12 @@ require_once "layout/main_menu.php";
     <img src="uploads/<?= $sejour["image"] ; ?>" alt="<?= $sejour["titre"] ; ?>">
 </div>
 
-<?php require_once "layout/second_menu.php"; ?>
+<?php getSecondMenu(); ?>
 
 <main class="section_presentation">
     <article class="container">
         <h1><?= $sejour['titre'] ; ?></h1>
-        <ul>
+        <ul class="caracteristiques">
             <li><?= $sejour['duree'] ; ?></li>
             <li>
                 <?php for ($i =1; $i <=5; $i++) : ?>
@@ -49,22 +50,13 @@ require_once "layout/main_menu.php";
     <div class="cadre container">
         <h2>Vous apprécierez</h2>
         <div class="apprecierez_container">
+            <?php foreach ($liste_points_cles as $point_cle) : ?>
             <article>
-                <img src="./images/temple.png" alt="temple">
-                <p>Des sites mayas incontournables et hors sentiers battus</p>
+                <img src="uploads/<?= $point_cle["icone"] ?>">
+                <p><?= $point_cle["libelle"] ?></p>
             </article>
-            <article>
-                <img src="./images/hand_heart_marron.png" alt="ecotourisme">
-                <p>Un délicieux cocktail d'écotourisme et de découverte culturelle</p>
-            </article>
-            <article>
-                <img src="./images/waterfall.png" alt="cascade">
-                <p>Palenque et les sites de la forêt lacandone au Chiapas</p>
-            </article>
-            <article>
-                <img src="./images/swim.png" alt="baignades">
-                <p>Un itinéraire ponctué de baignades en mer, en cenote et en lagune</p>
-            </article>
+<?php endforeach; ?>
+
         </div>
         <a class="cta" href="contact.html">Réservez</a>
     </div>
@@ -202,4 +194,4 @@ require_once "layout/main_menu.php";
 
 </div>
 
-<?php require_once "layout/footer.php";?>
+<?php getFooter();?>

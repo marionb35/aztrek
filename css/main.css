@@ -986,17 +986,13 @@ footer {
         flex-direction: row;
         justify-content: space-between; } }
 
-/*overlay*/
-.liste_pays {
+.caracteristiques {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: space-between; }
-
-.liste_pays ul li {
-  display: inline-block;
-  list-style: none; }
-
-.liste_pays a {
-  color: #222944; }
+  justify-content: space-around; }
+  .caracteristiques li {
+    padding: 2em; }
 
 .section_presentation .container h2 {
   color: #222944; }
@@ -1005,6 +1001,7 @@ footer {
   display: flex;
   justify-content: center; }
 
+/*overlay*/
 .destinations_container .overlay {
   margin: 0 20px; }
 

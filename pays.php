@@ -9,12 +9,11 @@ $pays = getOneEntity("pays",$id);
 getHeader("Pays", "Nos séjours par pays");
 
 
-require_once "layout/main_menu.php";
-
+getMainMenu();
 ?>
 
 
-<?php require_once "layout/second_menu.php"; ?>
+<?php getSecondMenu(); ?>
 
 <main class="section_presentation">
 
@@ -81,4 +80,4 @@ require_once "layout/main_menu.php";
 </div>
 
 
-<?php require_once "layout/footer.php";?>
+<?php getFooter();?>

@@ -5,7 +5,7 @@ require_once "functions.php";
 
 
 getHeader("Accueil", "Spécialiste de l'amerique latine");
-require_once "layout/main_menu.php";
+getMainMenu();
 
 ?>
 
@@ -18,7 +18,7 @@ require_once "layout/main_menu.php";
 
 <?php
 
-require_once "layout/second_menu.php";
+getSecondMenu();
 
 ?>
     <main>
@@ -154,4 +154,4 @@ require_once "layout/second_menu.php";
         </div>
     </section>
 
-<?php require_once "layout/footer.php";?>
+<?php getFooter();?>

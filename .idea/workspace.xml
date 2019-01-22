@@ -2,38 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3954f3f8-b7ee-4e4c-b988-cd3b70b26a78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49cd4f4b-e140-4277-bc5c-a96acabf79c3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/f78ef115ce3d0d6147f4234f860895aec9c40850/_sejour.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/f78ef115ce3d0d6147f4234f860895aec9c40850/_sejour.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aztrek.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/aztrek.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aztrek.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/aztrek.mwb.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/footprint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hand_heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hand_heart_marron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/leaf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour1/s1_j6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour2/s2_j1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour2/s2_j2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour2/s2_j3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour2/s2_j4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour2/s2_j5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sejour3/s3_j7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/swim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/temple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/volcan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/waterfall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/destinations.php" beforeDir="false" afterPath="$PROJECT_DIR$/destinations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/main_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/main_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/second_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/second_menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/entities/sejour_entity.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/entities/sejour_entity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pays.php" beforeDir="false" afterPath="$PROJECT_DIR$/pays.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/layout/_sejour.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/layout/_sejour.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sejour.php" beforeDir="false" afterPath="$PROJECT_DIR$/sejour.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,17 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pays.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="165">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sejour.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="530">
+              <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -82,17 +64,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/destinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="491">
+              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sejour.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/entities/sejour_entity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="270">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -116,15 +107,18 @@
       <list>
         <option value="$PROJECT_DIR$/scss/layout/_voyages.scss" />
         <option value="$PROJECT_DIR$/all_sejours.php" />
-        <option value="$PROJECT_DIR$/scss/layout/_sejour.scss" />
         <option value="$PROJECT_DIR$/config/parameters.php" />
-        <option value="$PROJECT_DIR$/layout/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/destination.php" />
         <option value="$PROJECT_DIR$/model/entities/pays_entity.php" />
-        <option value="$PROJECT_DIR$/layout/main_menu.php" />
-        <option value="$PROJECT_DIR$/destinations.php" />
+        <option value="$PROJECT_DIR$/scss/base/_base.scss" />
+        <option value="$PROJECT_DIR$/scss/layout/_sejour.scss" />
+        <option value="$PROJECT_DIR$/layout/header.php" />
         <option value="$PROJECT_DIR$/pays.php" />
+        <option value="$PROJECT_DIR$/layout/second_menu.php" />
+        <option value="$PROJECT_DIR$/layout/main_menu.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/destinations.php" />
         <option value="$PROJECT_DIR$/model/entities/sejour_entity.php" />
         <option value="$PROJECT_DIR$/sejour.php" />
       </list>
@@ -173,22 +167,6 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="aztrek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aztrek" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aztrek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aztrek" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aztrek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aztrek" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -199,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -237,7 +215,7 @@
       <workItem from="1547798703096" duration="502000" />
       <workItem from="1547827664125" duration="405000" />
       <workItem from="1548058626823" duration="14827000" />
-      <workItem from="1548145040506" duration="9197000" />
+      <workItem from="1548145040506" duration="13404000" />
     </task>
     <task id="LOCAL-00001" summary="upload initial">
       <created>1547742157877</created>
@@ -274,11 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548089764681</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="page pays et sejours">
+      <created>1548154968020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548154968020</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25760000" />
+    <option name="totallyTimeSpent" value="29967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="18" y="23" width="1649" height="1028" extended-state="0" />
@@ -297,10 +282,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32905984" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32905984" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="13" visible="true" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,7 +303,8 @@
     <MESSAGE value="modification mwb database et inserts" />
     <MESSAGE value="requete all sejours" />
     <MESSAGE value="destinations et debuts pays" />
-    <option name="LAST_COMMIT_MESSAGE" value="destinations et debuts pays" />
+    <MESSAGE value="page pays et sejours" />
+    <option name="LAST_COMMIT_MESSAGE" value="page pays et sejours" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sejour1.html" />
@@ -358,55 +344,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/model/entities/pays_entity.php" />
-    <entry file="file://$PROJECT_DIR$/layout/main_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/entities/ingredient_entity.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/entities/categorie_entity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/destinations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pays.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -417,24 +361,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_sejour.scss">
+    <entry file="file://$PROJECT_DIR$/scss/base/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2588">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/sejour_entity.php">
+    <entry file="file://$PROJECT_DIR$/scss/layout/_sejour.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/header.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/second_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/main_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/destinations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sejour.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="347">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pays.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/sejour_entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>

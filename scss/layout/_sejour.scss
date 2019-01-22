@@ -1,17 +1,13 @@
-/*overlay*/
-.liste_pays{
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.liste_pays ul li{
-  display: inline-block;
+.caracteristiques{
   list-style: none;
-}
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 
-.liste_pays a{
-  color: #222944;
+  li{
+    padding: 2em;
+  }
+
 }
 
 .section_presentation .container h2{
@@ -22,6 +18,8 @@
   display: flex;
   justify-content: center;
 }
+
+/*overlay*/
 
 .destinations_container .overlay {
   margin: 0 20px;
@@ -75,19 +73,6 @@
   opacity: 0;
 }
 
-//.section_destinations .overlay-image .hover .cta {
-//  position: absolute;
-//  width: 140px;
-//  height: 35px;
-//  background-color: #ffa630;
-//  font-size: 0.75rem;
-//  color: white;
-//  padding: 8px 5px;
-//  border: white solid 2px;
-//  left: 80px;
-//  bottom: 50px;
-//  z-index: 2;
-//}
 
 .destinations_container .overlay-image:hover .hover {
   opacity: 1;

@@ -7,12 +7,12 @@ $liste_pays = getAllEntities("pays");
 getHeader("Destinations", "Nos Destinations");
 
 
-require_once "layout/main_menu.php";
+getMainMenu();
 
 ?>
 
 
-<?php require_once "layout/second_menu.php"; ?>
+<?php getSecondMenu(); ?>
 
 <main class="section_presentation">
 
@@ -41,4 +41,4 @@ require_once "layout/main_menu.php";
 
 
 
-<?php require_once "layout/footer.php";?>
+<?php getFooter();?>
