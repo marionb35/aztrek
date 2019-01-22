@@ -31,12 +31,12 @@ function getAllEntities(string $table){
     $stmt->execute();
 
     return $stmt->fetchAll();
-}
+};
 
 function getOneEntity(string $table, int $id):array{
     global $connection;
 
-    $query = "SELECT * FROM $table WHERE id=:id";
+    $query = "SELECT * FROM $table WHERE id = :id";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":id", $id);
@@ -44,7 +44,7 @@ function getOneEntity(string $table, int $id):array{
 
     return $stmt->fetch();
 
-}
+};
 
 
 function deleteEntity(string $table, int $id){
@@ -63,5 +63,5 @@ function deleteEntity(string $table, int $id){
 
     return null;
 
-}
+};
 

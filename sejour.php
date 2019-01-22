@@ -5,7 +5,6 @@ require_once "functions.php";
 $id = $_GET["id"];
 $sejour = getOneSejour($id);
 $departs = getAllDepartsBySejour($id);
-$prix_min = ROUND(MIN($departs["prix"]));
 $liste_jours = getAllProgrammeBySejour($id);
 $liste_points_cles = getAllPointsClesBySejour($id);
 

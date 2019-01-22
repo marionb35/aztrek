@@ -745,14 +745,6 @@ main {
     main .container p {
       margin: 40px auto; }
 
-#promo {
-  background: url(../images/karla-lopez-596646-unsplash.jpg) center no-repeat;
-  background-size: cover; }
-
-#depart-immediat {
-  background: url(images/cameron-wilkins-487426-unsplash.jpg) center no-repeat;
-  background-size: cover; }
-
 .voyage {
   padding: 15px; }
   .voyage .cadre-blanc {
@@ -774,12 +766,6 @@ main {
         justify-content: space-between;
         width: 100%;
         padding: 15px; }
-        .voyage .cadre-blanc article .points-cles .difficulte {
-          background: url(../images/difficulte.png);
-          background-size: cover;
-          width: 80px;
-          height: 12px;
-          font-size: 0; }
 
 .inspirations {
   background-color: #f5f1ed;

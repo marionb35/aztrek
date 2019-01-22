@@ -6,6 +6,7 @@ require_once "functions.php";
 $coup_de_coeur = getOneCoupDeCoeur();
 $promo = getOnePromo();
 
+
 getHeader("Accueil", "Spécialiste de l'amerique latine");
 getMainMenu();
 
@@ -47,17 +48,22 @@ getSecondMenu();
                     <p><?= $coup_de_coeur['description_courte'] ; ?></p>
                     <div class="points-cles">
                         <h6><?= $coup_de_coeur['duree'] ; ?></h6>
-                        <h6 class="difficulte">
-                                <div class="chaussures">
+                        <h6>
+                            <ul>
+                                <li class="chaussures">
                                     <?php for ($i =1; $i <=5; $i++) : ?>
                                     <?php if ($i <= $coup_de_coeur["difficulte"]) : ?>
                                         <img src="uploads/chaussure_pleine.png" alt="">
                                     <?php else: ?>
                                         <img src="uploads/chaussure_vide.png" alt="">
                                     <?php endif; ?>
-                            <?php endfor; ?></div>
-                        </h6>
-                        <h6>A partir de ><?= $coup_de_coeur['min_prix'] ; ?> €</h6>
+                            <?php endfor; ?></h6>
+
+                        <h6><?php if ($promo['prix_min']) : ?>
+                                A partir de <?= $promo['prix_min'] ; ?> €
+                            <?php else : ?>
+                                Sur Mesure
+                            <?php endif; ?></h6>
                     </div>
                     <a href="sejour.php?id=<?= $coup_de_coeur["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
                 </article>
@@ -72,7 +78,7 @@ getSecondMenu();
             <div class="container">
                 <div class="cadre-blanc">
                     <article>
-                        <h3>Notre Coup de coeur</h3>
+                        <h3>Notre Promo</h3>
                         <h4 class="medium"><?= $promo['titre'] ; ?><br><?= $promo['pays'] ; ?></h4>
                         <p><?= $promo['description_courte'] ; ?></p>
                         <div class="points-cles">
@@ -87,7 +93,11 @@ getSecondMenu();
                                             <img src="uploads/chaussure_vide.png" alt="">
                                         <?php endif; ?>
                                 <?php endfor; ?></h6>
-                            <h6>A partir de ><?= $promo['min_prix'] ; ?> €</h6>
+                            <h6><?php if ($promo['prix_min']) : ?>
+                                    A partir de <?= $promo['prix_min'] ; ?> €
+                                <?php else : ?>
+                                Sur Mesure
+    <?php endif; ?></h6>
                         </div>
                         <a href="sejour.php?id=<?= $promo["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
                     </article>
