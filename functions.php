@@ -16,7 +16,7 @@ function getCurrentUser(){
     }
     // Récupérer l'utilisateur en cours si connecté
     if (isset($_SESSION['id'])) {
-        return getOneEntity('utilisateur', $_SESSION['id']);
+        return getOneEntity("utilisateur", $_SESSION['id']);
     }
     return null;
 }

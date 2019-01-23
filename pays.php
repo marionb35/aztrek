@@ -27,7 +27,17 @@ getMainMenu();
                         <div class="normal">
                             <div class="text"><?= $sejour["titre"] ; ?></div>
                             <div class="jours"><?= $sejour["duree"] ; ?></div>
-                            <div class="difficulte"><img src="./images/chaussures_blanc_<?= $sejour['difficulte'] ; ?>.png" alt="<?= $sejour['difficulte_nom'] ; ?>"></div>
+                            <div class="difficulte">
+                                <div class="chaussures">
+                                    <?php for ($i =1; $i <=5; $i++) : ?>
+                                    <?php if ($i <= $sejour["difficulte"]) : ?>
+                                        <img src="uploads/chaussure_pleine.png" alt="">
+                                    <?php else: ?>
+                                        <img src="uploads/chaussure_vide.png" alt="">
+                                    <?php endif; ?>
+                                <?php endfor; ?>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>

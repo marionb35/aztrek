@@ -31,7 +31,11 @@ function insertUtilisateur(string $nom, string $prenom, string $email, string $m
     $stmt->bindParam(":mot_de_passe",$mot_de_passe);
     $stmt->bindParam(":nom",$nom);
     $stmt->bindParam(":prenom",$prenom);
-    $stmt->execute();
 
-    return $stmt->execute();
+    try {
+        return $stmt->execute();
+    } catch (PDOException $exception) {
+        return false;
+    }
+
 }

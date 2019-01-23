@@ -2,10 +2,9 @@
 
 require_once "model/database.php";
 require_once "functions.php";
-
 $coup_de_coeur = getOneCoupDeCoeur();
 $promo = getOnePromo();
-
+$depart_imminent = getProchainDepart();
 
 getHeader("Accueil", "Spécialiste de l'amerique latine");
 getMainMenu();
@@ -48,9 +47,7 @@ getSecondMenu();
                     <p><?= $coup_de_coeur['description_courte'] ; ?></p>
                     <div class="points-cles">
                         <h6><?= $coup_de_coeur['duree'] ; ?></h6>
-                        <h6>
-                            <ul>
-                                <li class="chaussures">
+                        <h6 class="chaussures">
                                     <?php for ($i =1; $i <=5; $i++) : ?>
                                     <?php if ($i <= $coup_de_coeur["difficulte"]) : ?>
                                         <img src="uploads/chaussure_pleine.png" alt="">
@@ -59,8 +56,8 @@ getSecondMenu();
                                     <?php endif; ?>
                             <?php endfor; ?></h6>
 
-                        <h6><?php if ($promo['prix_min']) : ?>
-                                A partir de <?= $promo['prix_min'] ; ?> €
+                        <h6><?php if ($coup_de_coeur['prix_min']) : ?>
+                                A partir de <?= $coup_de_coeur['prix_min'] ; ?> €
                             <?php else : ?>
                                 Sur Mesure
                             <?php endif; ?></h6>
@@ -83,9 +80,7 @@ getSecondMenu();
                         <p><?= $promo['description_courte'] ; ?></p>
                         <div class="points-cles">
                             <h6><?= $promo['duree'] ; ?></h6>
-                            <h6>
-                                <ul>
-                                    <li class="chaussures">
+                            <h6 class="chaussures">
                                         <?php for ($i =1; $i <=5; $i++) : ?>
                                         <?php if ($i <= $promo["difficulte"]) : ?>
                                             <img src="uploads/chaussure_pleine.png" alt="">
@@ -95,9 +90,9 @@ getSecondMenu();
                                 <?php endfor; ?></h6>
                             <h6><?php if ($promo['prix_min']) : ?>
                                     A partir de <?= $promo['prix_min'] ; ?> €
-                                <?php else : ?>
+                                <?php else: ?>
                                 Sur Mesure
-    <?php endif; ?></h6>
+    <?php endif ?></h6>
                         </div>
                         <a href="sejour.php?id=<?= $promo["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
                     </article>
@@ -106,23 +101,32 @@ getSecondMenu();
         </div>
     </section>
 
-    <section style="background: url(uploads/image_sejour_6.jpg) center no-repeat;
+    <section style="background: url(uploads/<?= $depart_imminent['image'] ; ?>) center no-repeat;
             background-size: cover;">
         <div class="voyage">
         <div class="container">
             <div class="cadre-blanc">
                 <article>
                     <h3>Départ Immédiat</h3>
-                    <h4 class="medium">Au pays des volcans <br>GUATEMALA </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt optio dolore aut
-                        distinctio?
-                        Error nobis quo harum voluptatem obcaecati?</p>
+                    <h4 class="medium"><?= $depart_imminent['titre'] ; ?><br><?= $depart_imminent['pays'] ; ?></h4>
+                    <p><?= $depart_imminent['description_courte'] ; ?></p>
                     <div class="points-cles">
-                        <h6>7 jours</h6>
-                        <h6 class="difficulte">difficulté 2 sur 5</h6>
-                        <h6>1290 €</h6>
+                        <h6><?= $depart_imminent['duree'] ; ?></h6>
+                        <h6 class="chaussures">
+                            <?php for ($i =1; $i <=5; $i++) : ?>
+                                <?php if ($i <= $depart_imminent["difficulte"]) : ?>
+                                    <img src="uploads/chaussure_pleine.png" alt="">
+                                <?php else: ?>
+                                    <img src="uploads/chaussure_vide.png" alt="">
+                                <?php endif; ?>
+                            <?php endfor; ?></h6>
+                        <h6><?php if ($depart_imminent['prix_min']) : ?>
+                                A partir de <?= $depart_imminent['prix_min'] ; ?> €
+                            <?php else: ?>
+                                Sur Mesure
+                            <?php endif ?></h6>
                     </div>
-                    <a href="#" class="cta cta-vert">Je pars à l'aventure</a>
+                    <a href="sejour.php?id=<?= $depart_imminent["id"]; ?>" class="cta cta-vert">Je pars à l'aventure</a>
                 </article>
             </div>
         </div>

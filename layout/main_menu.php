@@ -19,7 +19,7 @@ $user = getCurrentUser();
                 <li><a href="agence.php">Qui sommes-nous</a></li>
                 <li><a href="contact.php">Contactez nous</a></li>
                 <?php if (isset($user)): ?>
-                    <li><a href="#"><i class="fa fa-user"></i><?= $user["email"] ; ?></a></li>
+                    <li><a href="<?= SITE_ADMIN; ?>"><i class="fa fa-user"></i><?= $user["email"] ; ?></a></li>
                     <li><a href="<?= SITE_ADMIN . "logout.php"; ?>"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
                 <?php else: ?>
                     <li><a href="<?= SITE_ADMIN; ?>">Mon compte</a></li>

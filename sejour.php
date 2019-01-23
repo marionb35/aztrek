@@ -36,7 +36,11 @@ getMainMenu();
 <?php endif; ?>
 <?php endfor; ?>
         </li>
-            <li>à partir de <?= $prix_min ; ?> €</li>
+            <li><?php if ($sejour['prix_min']) : ?>
+                    A partir de <?= $sejour['prix_min'] ; ?> €
+                <?php else: ?>
+                    Sur Mesure
+                <?php endif ?></li>
         </ul>
         <p><?= $sejour['description_longue'] ; ?>
         </p>
