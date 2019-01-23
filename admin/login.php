@@ -26,6 +26,7 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <p>Si vous n'avez pas encore de compte <a href="create_account.php">c'est par ici</a></p>
             <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
         </form>
     </body>

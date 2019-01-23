@@ -272,3 +272,38 @@ function insertSejour(string $titre, int $pays_id, int $difficulte_id, string $i
     $stmt->bindParam(":carte", $carte);
     $stmt->execute();
 }
+
+function updateSejour(int $id, string $titre, int $pays_id, int $difficulte_id, string $filename_image, string $description_longue, string $description_courte, int $duree, int $nb_places, int $promo, int $coup_de_coeur, string $filename_carte){
+    global $connection;
+
+    $query = "
+    UPDATE sejour 
+    SET titre = :titre,
+    pays_id = :pays_id, 
+    difficulte_id = :difficulte_id, 
+    image = :image, 
+    description_longue = :description_longue, 
+    description_courte = :description_courte, 
+    duree = :duree, 
+    nb_places = :nb_places, 
+    promo = :promo, 
+    coup_de_coeur = :coup_de_coeur, 
+    carte = :carte
+    WHERE id = :id
+    ";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->bindParam(":titre", $titre);
+    $stmt->bindParam(":pays_id", $pays_id);
+    $stmt->bindParam(":difficulte_id", $difficulte_id);
+    $stmt->bindParam(":image", $image);
+    $stmt->bindParam(":description_longue", $description_longue);
+    $stmt->bindParam(":description_courte", $description_courte);
+    $stmt->bindParam(":duree", $duree);
+    $stmt->bindParam(":nb_places", $nb_places);
+    $stmt->bindParam(":promo", $promo);
+    $stmt->bindParam(":coup_de_coeur", $coup_de_coeur);
+    $stmt->bindParam(":carte", $carte);
+    $stmt->execute();
+};

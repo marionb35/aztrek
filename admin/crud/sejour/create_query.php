@@ -1,8 +1,6 @@
 <?php
 require_once '../../security.php';
 require_once '../../../model/database.php';
-print_r($_POST);
-print_r($_FILES);
 
 $titre = $_POST['titre'];
 $pays_id = $_POST['pays_id'];

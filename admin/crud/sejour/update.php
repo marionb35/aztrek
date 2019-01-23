@@ -10,21 +10,6 @@ $liste_difficulte = getAllEntities("difficulte");
 require_once '../../layout/header.php';
 ?>
 
-        <div class="form-group form-check">
-            <input type="hidden" name="promo" value="0">
-            <input type="checkbox" name="promo" class="form-check-input">
-            <label>Promo</label>
-        </div>
-        <div class="form-group form-check">
-            <input type="hidden" name="coup_de_coeur" value="0">
-            <input type="checkbox" name="coup_de_coeur" class="form-check-input">
-            <label>Coup de coeur</label>
-        </div>
-        <button type="submit" class="btn btn-success">
-            <i class="fa fa-check"></i>
-            Ajouter
-        </button>
-    </form>
 
 <h1>Modification d'un séjour</h1>
 
