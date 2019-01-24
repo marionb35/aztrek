@@ -101,12 +101,14 @@ getMainMenu();
 
                 <table>
                     <tr>
-                        <th>Date de départ</th>
-                        <th>Prix</th>
+                        <th><h3>Date de départ</h3></th>
+                        <th><h3>Date de retour</h3></th>
+                        <th><h3>Prix</h3></th>
                     </tr>
                     <?php foreach ($departs as $depart) : ?>
                     <tr>
                         <td><?= $depart["date_depart"] ; ?></td>
+                        <td><?= $depart["date_retour"] ; ?></td>
                         <td><?= $depart["prix"] ; ?> €</td>
                     </tr>
                     <?php endforeach; ?>

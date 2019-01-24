@@ -6,8 +6,10 @@ function getAllDepartsBySejour(int $id): array
     $query = "
     SELECT 
         DATE_FORMAT(date_depart, '%d/%m/%Y') AS date_depart,
+           DATE_FORMAT(ADDDATE(date_depart, sejour.duree), '%d/%m/%Y') AS date_retour,
            ROUND(prix) AS prix
     FROM depart
+    INNER JOIN sejour ON depart.sejour_id = sejour.id
     WHERE sejour_id = :id
     ";
 
