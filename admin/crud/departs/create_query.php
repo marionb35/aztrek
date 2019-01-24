@@ -1,18 +1,13 @@
 <?php
 require_once '../../security.php';
 require_once '../../../model/database.php';
-print_r($_POST);
-print_r($_FILES);
 
-$libelle = $_POST['libelle'];
+$sejour_id = $_POST["sejour_id"];
+$date_depart = $_POST['depart'];
+$prix = $_POST['prix'];
 
 
 
-// Upload de l'image
-$filename = $_FILES["image"]["name"];
-$tmp = $_FILES["image"]["tmp-name"];
-move_uploaded_file($tmp, "../../../uploads/" . $filename);
+insertDepart($date_depart, $prix, $sejour_id);
 
-insertPays($libelle, $filename);
-
-header('Location: index.php');
+header('Location: index_sejour.php?sejour_id=' .  $sejour_id);

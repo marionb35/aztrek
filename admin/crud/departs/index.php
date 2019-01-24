@@ -19,14 +19,9 @@ if (isset($_GET['errcode'])) {
 require_once '../../layout/header.php';
 ?>
 
-<h1>Gestion des Départs et Prix</h1>
 
-<a href="create.php" class="btn btn-primary">
-    <i class="fa fa-plus"></i>
-    Ajouter
-</a>
-
-<hr>
+    <h1>Gestion des départs et des prix par séjour</h1>
+<!--<hr>-->
 
 <?php if ($error_msg) : ?>
     <div class="alert alert-danger">
@@ -51,17 +46,10 @@ require_once '../../layout/header.php';
                 <td><?php echo $sejour['duree']; ?></td>
                 <td><?php echo $sejour['min_prix']; ?></td>
                 <td class="actions">
-                    <a href="update.php?id=<?php echo $sejour['id']; ?>" class="btn btn-warning">
+                    <a href="index_sejour.php?sejour_id=<?php echo $sejour['id']; ?>" class="btn btn-warning">
                         <i class="fa fa-edit"></i>
                         Modifier
                     </a>
-                    <form action="delete_query.php" method="POST">
-                        <input type="hidden" name="id" value="<?php echo $sejour['id']; ?>">
-                        <button type="submit" class="btn btn-danger">
-                            <i class="fa fa-trash"></i>
-                            Supprimer
-                        </button>
-                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>
