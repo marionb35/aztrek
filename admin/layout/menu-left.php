@@ -20,12 +20,12 @@
                     Pays
                 </a>
             </li>
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="#">-->
-<!--                    <i class="fa fa-tags"></i>-->
-<!--                    Tags-->
-<!--                </a>-->
-<!--            </li>-->
+        <li class="nav-item">
+                <a class="nav-link <?php echo isActive("/crud/departs/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/departs/">
+                    <i class="fa fa-calendar"></i>
+                    Départs
+                </a>
+            </li>
 <!--            <li class="nav-item">-->
 <!--                <a class="nav-link" href="#">-->
 <!--                    <i class="fa fa-comments"></i>-->

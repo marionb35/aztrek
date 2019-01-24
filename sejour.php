@@ -7,14 +7,9 @@ $sejour = getOneSejour($id);
 $departs = getAllDepartsBySejour($id);
 $liste_jours = getAllProgrammeBySejour($id);
 $liste_points_cles = getAllPointsClesBySejour($id);
-//print_r($sejour_prev = getOneSejour($id-1));
-//if (getOneSejour($id-1)){
-$sejour_prev = getOneSejour($id-1);
-//} else {
-//    $sejour_prev = getOneSejour($id+2);
-//};
-$sejour_next = getOneSejour($id+1);
-//!($sejour_next) ? $sejour_next=getOneSejour($id-2) : $sejour_next = getOneSejour($id+1);
+$nb_sejours = count(getAllSejours());
+$sejour_prev = getOneSejour($id == 1 ? 3 : ($id-1) );
+$sejour_next = getOneSejour($id == $nb_sejours ? ($id-2) : ($id+1) );
 
 getHeader("Séjour", "votre séjour");
 
