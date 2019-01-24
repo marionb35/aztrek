@@ -16,13 +16,22 @@
 
 .destinations_container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+
+  .cadre_pays{
+    flex-basis: 50%;
+
+    .chaussures>img{
+      height: 20px;
+    }
+  }
 }
 
 /*overlay*/
 
 .destinations_container .overlay {
-  margin: 0 20px;
+  padding: 20px;
 }
 
 .destinations_container .overlay-image {
@@ -54,14 +63,14 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   text-align: left;
   position: absolute;
-  bottom: 10px;
-  left: 20px;
+  bottom: 30px;
+  left: 40px;
 }
 
 .destinations_container .overlay-image .difficulte {
   position: absolute;
-  bottom: 10px;
-  right: 20px;
+  bottom: 30px;
+  right: 40px;
 }
 
 /* Overlay */
@@ -87,6 +96,11 @@
   background-size: cover;
   padding: 70px 0 150px;
   position: relative;
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .section_temoignages h2 {
@@ -117,21 +131,17 @@
 }
 
 .section_temoignages .cta {
-  position: absolute;
-  background-color: #ffa630;
-  padding: 15px 5px;
-  border: white solid 2px;
-  z-index: 2;
-  bottom: 50px;
-  left: calc(50% - 110px);
-  display: block;
-  font-size: 1rem;
-  color: white;
+  display: inline-block;
+ margin: 40px auto;
 }
 
 /* --------------------------------
 -------PRESENTATION SEJOUR--------
 -------------------------------- */
+
+.section_slider img{
+  width: 100%;
+}
 
 .page_sejour .section_presentation {
   padding: 80px 50px;
@@ -180,6 +190,14 @@
   background: url('../images/mur_jaune.jpg') no-repeat;
   background-size: cover;
   padding: 70px 0;
+.cadre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .cta{
+    display: inline-block;
+  }
 }
 
 .section_apprecierez h2 {
@@ -206,14 +224,7 @@
   margin: 0 20px;
 }
 
-.section_apprecierez .cta {
-  background-color: #804531;
-  font-size: 1rem;
-  color: white;
-  padding: 15px 25px;
-  border: white solid 2px;
-  margin: 40px auto 20px;
-}
+
 
 /* ---------------------
 -------CARTE------------
@@ -228,43 +239,59 @@
 ---------------------- */
 
 .itineraire {
-  margin: 80px 0;
+  margin: 80px 0 20px;
+
+  .jour {
+    display: flex;
+    margin: 20px 0;
+    align-items: flex-start;
+  }
+
+  article {
+    flex-basis: 75%;
+    padding-right: 20px;
+  }
+
+  h5 {
+    margin-top: 0;
+  }
+
+  img {
+    border: #ffa630 solid 2px;
+    width: 240px;
+    height: 240px;
+  }
+
+  ul {
+    list-style: inherit;
+    padding: 0 40px;
+  }
+
+
 }
 
-.itineraire .jour {
-  display: flex;
-  margin: 20px 0;
-  align-items: flex-start;
-}
+.departs{
+  table{
+width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    table, th, td{
+      border: #ffa630 solid 2px;
+      padding: 1em;
 
-.itineraire article {
-  flex-basis: 75%;
-  padding-right: 20px;
-}
-
-.itineraire h5 {
-  margin-top: 0;
-}
-
-
-.itineraire img {
-  border: #ffa630 solid 2px;
-  width: 240px;
-  height: 240px;
-}
-
-.itineraire ul {
-  list-style: inherit;
-  padding: 0 40px;
-}
-
-.itineraire .cta {
-  background-color: #804531;
-  font-size: 1rem;
-  color: white;
-  padding: 15px 25px;
-  border: white solid 2px;
-  margin: 40px auto 20px;
+      vertical-align: middle;
+      h3 {
+        margin: 0;
+      }
+    }
+    .center{
+      text-align: center;
+      a{
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 

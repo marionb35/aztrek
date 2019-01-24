@@ -353,6 +353,37 @@ a {
     width: 100%;
     opacity: 1; }
 
+.cta-orange-blanc {
+  display: inline-block;
+  position: relative;
+  border-radius: 40px;
+  border: solid 2px #e15829;
+  background-color: white;
+  color: #e15829;
+  border: solid 2px #e15829;
+  padding: .5em 1em;
+  text-align: center;
+  transition: color .25s .25s/3; }
+  .cta-orange-blanc::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    border-radius: 40px;
+    background-color: #e15829;
+    z-index: -1;
+    transition: .5s; }
+  .cta-orange-blanc:hover {
+    color: white;
+    z-index: 0; }
+  .cta-orange-blanc:hover::before {
+    width: 100%;
+    opacity: 1; }
+
 .cta-vert {
   display: inline-block;
   position: relative;
@@ -770,6 +801,8 @@ main {
         justify-content: space-between;
         width: 100%;
         padding: 15px; }
+        .voyage .cadre-blanc article .points-cles .chaussures > img {
+          height: 15px; }
 
 .inspirations {
   background-color: #f5f1ed;
@@ -988,11 +1021,16 @@ footer {
 
 .destinations_container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
+  .destinations_container .cadre_pays {
+    flex-basis: 50%; }
+    .destinations_container .cadre_pays .chaussures > img {
+      height: 20px; }
 
 /*overlay*/
 .destinations_container .overlay {
-  margin: 0 20px; }
+  padding: 20px; }
 
 .destinations_container .overlay-image {
   position: relative; }
@@ -1020,13 +1058,13 @@ footer {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   text-align: left;
   position: absolute;
-  bottom: 10px;
-  left: 20px; }
+  bottom: 30px;
+  left: 40px; }
 
 .destinations_container .overlay-image .difficulte {
   position: absolute;
-  bottom: 10px;
-  right: 20px; }
+  bottom: 30px;
+  right: 40px; }
 
 /* Overlay */
 .destinations_container .overlay-image .hover {
@@ -1045,6 +1083,9 @@ footer {
   background-size: cover;
   padding: 70px 0 150px;
   position: relative; }
+  .section_temoignages .container {
+    display: flex;
+    flex-direction: column; }
 
 .section_temoignages h2 {
   color: white;
@@ -1069,20 +1110,15 @@ footer {
   font-size: 0.875rem; }
 
 .section_temoignages .cta {
-  position: absolute;
-  background-color: #ffa630;
-  padding: 15px 5px;
-  border: white solid 2px;
-  z-index: 2;
-  bottom: 50px;
-  left: calc(50% - 110px);
-  display: block;
-  font-size: 1rem;
-  color: white; }
+  display: inline-block;
+  margin: 40px auto; }
 
 /* --------------------------------
 -------PRESENTATION SEJOUR--------
 -------------------------------- */
+.section_slider img {
+  width: 100%; }
+
 .page_sejour .section_presentation {
   padding: 80px 50px; }
 
@@ -1120,6 +1156,12 @@ footer {
   background: url("../images/mur_jaune.jpg") no-repeat;
   background-size: cover;
   padding: 70px 0; }
+  .section_apprecierez .cadre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .section_apprecierez .cta {
+    display: inline-block; }
 
 .section_apprecierez h2 {
   margin-bottom: 30px; }
@@ -1140,14 +1182,6 @@ footer {
 .apprecierez_container p {
   margin: 0 20px; }
 
-.section_apprecierez .cta {
-  background-color: #804531;
-  font-size: 1rem;
-  color: white;
-  padding: 15px 25px;
-  border: white solid 2px;
-  margin: 40px auto 20px; }
-
 /* ---------------------
 -------CARTE------------
 ---------------------- */
@@ -1158,36 +1192,39 @@ footer {
 -------ITINERAIRE-------
 ---------------------- */
 .itineraire {
-  margin: 80px 0; }
+  margin: 80px 0 20px; }
+  .itineraire .jour {
+    display: flex;
+    margin: 20px 0;
+    align-items: flex-start; }
+  .itineraire article {
+    flex-basis: 75%;
+    padding-right: 20px; }
+  .itineraire h5 {
+    margin-top: 0; }
+  .itineraire img {
+    border: #ffa630 solid 2px;
+    width: 240px;
+    height: 240px; }
+  .itineraire ul {
+    list-style: inherit;
+    padding: 0 40px; }
 
-.itineraire .jour {
-  display: flex;
-  margin: 20px 0;
-  align-items: flex-start; }
-
-.itineraire article {
-  flex-basis: 75%;
-  padding-right: 20px; }
-
-.itineraire h5 {
-  margin-top: 0; }
-
-.itineraire img {
-  border: #ffa630 solid 2px;
-  width: 240px;
-  height: 240px; }
-
-.itineraire ul {
-  list-style: inherit;
-  padding: 0 40px; }
-
-.itineraire .cta {
-  background-color: #804531;
-  font-size: 1rem;
-  color: white;
-  padding: 15px 25px;
-  border: white solid 2px;
-  margin: 40px auto 20px; }
+.departs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px; }
+  .departs table table, .departs table th, .departs table td {
+    border: #ffa630 solid 2px;
+    padding: 1em;
+    vertical-align: middle; }
+    .departs table table h3, .departs table th h3, .departs table td h3 {
+      margin: 0; }
+  .departs table .center {
+    text-align: center; }
+    .departs table .center a {
+      display: inline-block;
+      margin: 0 auto; }
 
 /* ------------------------------
 -------AUTRE DESTINATIONS--------

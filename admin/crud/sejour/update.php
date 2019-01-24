@@ -10,7 +10,6 @@ $liste_difficulte = getAllEntities("difficulte");
 require_once '../../layout/header.php';
 ?>
 
-
 <h1>Modification d'un séjour</h1>
 
 <form action="update_query.php" method="POST" enctype="multipart/form-data">

@@ -21,7 +21,7 @@ getMainMenu();
 
             <div class="destinations_container">
 <?php foreach ($liste_pays as $pays) : ?>
-                <div class="overlay-image overlay">
+                <div class="overlay-image overlay cadre_pays">
                     <a href="pays.php?id=<?= $pays["id"]; ?>">
                         <img class="image" src="uploads/<?= $pays["image"]; ?>" alt="<?= $pays["libelle"]; ?>" />
                         <div class="normal">

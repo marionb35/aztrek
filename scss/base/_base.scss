@@ -33,6 +33,10 @@ a{
     @include cta($orange,transparent);
 }
 
+.cta-orange-blanc{
+    @include cta($orange,white);
+}
+
 .cta-vert{
     @include cta($vert,transparent);
 }

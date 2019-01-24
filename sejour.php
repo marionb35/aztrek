@@ -7,6 +7,14 @@ $sejour = getOneSejour($id);
 $departs = getAllDepartsBySejour($id);
 $liste_jours = getAllProgrammeBySejour($id);
 $liste_points_cles = getAllPointsClesBySejour($id);
+//print_r($sejour_prev = getOneSejour($id-1));
+//if (getOneSejour($id-1)){
+$sejour_prev = getOneSejour($id-1);
+//} else {
+//    $sejour_prev = getOneSejour($id+2);
+//};
+$sejour_next = getOneSejour($id+1);
+//!($sejour_next) ? $sejour_next=getOneSejour($id-2) : $sejour_next = getOneSejour($id+1);
 
 getHeader("Séjour", "votre séjour");
 
@@ -60,7 +68,7 @@ getMainMenu();
 <?php endforeach; ?>
 
         </div>
-        <a class="cta" href="contact.html">Réservez</a>
+        <a class="cta cta-vert-blanc" href="contact.html">Réservez</a>
     </div>
 </div>
 
@@ -69,7 +77,7 @@ getMainMenu();
 </div>
 
 <div class="itineraire">
-    <h2>Itinéraire</h2>
+    <h3>Itinéraire</h3>
     <div class="article_container container">
 <?php foreach ($liste_jours as $jour) : ?>
         <div class="jour">
@@ -91,7 +99,7 @@ getMainMenu();
             <img src="uploads/<?= $jour["image"] ; ?>" alt="jour <?= $jour["numero_jour"] ; ?>">
         </div>
  <?php endforeach; ?>
-        <a class="cta" href="contact.html">Réservez</a>
+
     </div>
 </div>
 
@@ -104,18 +112,18 @@ getMainMenu();
                         <th><h3>Date de départ</h3></th>
                         <th><h3>Date de retour</h3></th>
                         <th><h3>Prix</h3></th>
+                        <th><h3>Réservation</h3></th>
                     </tr>
                     <?php foreach ($departs as $depart) : ?>
                     <tr>
                         <td><?= $depart["date_depart"] ; ?></td>
                         <td><?= $depart["date_retour"] ; ?></td>
-                        <td><?= $depart["prix"] ; ?> €</td>
+                        <td class="center"><?= $depart["prix"] ; ?> €</td>
+                       <td class="center"> <a class="cta cta-bleu" href="contact.html">Réservez</a></td>
                     </tr>
                     <?php endforeach; ?>
                 </table>
 
-            <a class="cta" href="contact.html">Réservez</a>
-        </div>
     </div>
 
 
@@ -164,35 +172,10 @@ getMainMenu();
 
         <div class="destinations_container">
 
-            <div class="overlay-image overlay"><a href="sejour2.html">
-                    <img class="image" src="./images/puebla.jpg" alt="puebla" />
-                    <div class="normal">
-                        <div class="text">Caminando Mexico</div>
-                        <div class="jours">5 jours</div>
-                        <div class="difficulte"><img src="./images/chaussures_blanc_2.png" alt="difficulté 1"></div>
-                    </div>
-                    <div class="hover">
-                        <img class="image" src="./images/bg_rollover_sejour2.jpg" alt="carte sejour1" />
-                        <div class="text">Caminando Mexico</div>
-                        <div class="cta">Partez avec nous</div>
-                    </div>
-                </a>
-            </div>
-            <div class="overlay-image overlay">
-                <a href="sejour3.html">
-                    <img class="image" src="./images/popo.jpg" alt="popo" />
-                    <div class="normal">
-                        <div class="text">Les volcans</div>
-                        <div class="jours">7 jours</div>
-                        <div class="difficulte"><img src="./images/chaussures_blanc_3.png" alt="difficulté 1"></div>
-                    </div>
-                    <div class="hover">
-                        <img class="image" src="./images/bg_rollover_sejour3.jpg" alt="carte sejour1" />
-                        <div class="text">Les volcans</div>
-                        <div class="cta">Partez avec nous</div>
-                    </div>
-                </a>
-            </div>
+            <?php $sejour = $sejour_prev;
+            include "include/sejour_inc.php";?>
+            <?php $sejour = $sejour_next;
+            include "include/sejour_inc.php";?>
         </div>
     </div>
 
