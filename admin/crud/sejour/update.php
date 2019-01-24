@@ -49,9 +49,9 @@ require_once '../../layout/header.php';
     </div>
     <div class="form-group">
         <label>Carte</label>
-        <input type="file" name="image" class="form-control">
-        <?php if ($sejour["image"]) : ?>
-            <img src="../../../uploads/<?php echo $sejour["image"]; ?>" class="img-thumbnail">
+        <input type="file" name="carte" class="form-control">
+        <?php if ($sejour["carte"]) : ?>
+            <img src="../../../uploads/<?php echo $sejour["carte"]; ?>" class="img-thumbnail">
         <?php endif; ?>
     </div>
     <div class="form-group">

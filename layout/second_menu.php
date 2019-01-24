@@ -23,8 +23,12 @@ $user = getCurrentUser();
         <nav id="compte-contact">
             <ul>
                 <?php if (isset($user)): ?>
-                <li><a href="<?= SITE_ADMIN; ?>"><i class="fa fa-user"></i><?= $user["email"] ; ?></a></li>
-                    <li><a href="<?= SITE_ADMIN . "logout.php"; ?>"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+                <li><a href="#">Mon Compte</a>
+                    <ul class="sous-menu">
+                        <li><a href="<?= SITE_ADMIN; ?>"><i class="fa fa-user"></i><?= $user["email"] ; ?></a></li>
+                        <li><a href="<?= SITE_ADMIN . "logout.php"; ?>"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+                    </ul>
+                    </li>
                 <?php else: ?>
                 <li><a href="<?= SITE_ADMIN; ?>">Mon compte</a></li>
                 <?php endif; ?>

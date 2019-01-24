@@ -273,7 +273,7 @@ function insertSejour(string $titre, int $pays_id, int $difficulte_id, string $i
     $stmt->execute();
 }
 
-function updateSejour(int $id, string $titre, int $pays_id, int $difficulte_id, string $filename_image, string $description_longue, string $description_courte, int $duree, int $nb_places, int $promo, int $coup_de_coeur, string $filename_carte){
+function updateSejour(int $id, string $titre, int $pays_id, int $difficulte_id, string $image, string $description_longue, string $description_courte, int $duree, int $nb_places, int $promo, int $coup_de_coeur, string $carte){
     global $connection;
 
     $query = "

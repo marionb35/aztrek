@@ -6,6 +6,10 @@ require_once '../../../model/database.php';
 $id = $_POST['id'];
 $sejour = getOneSejour($id);
 
+print_r($_POST);
+print_r($_FILES);
+print_r($sejour);
+
 $titre = $_POST['titre'];
 $pays_id = $_POST['pays_id'];
 $difficulte_id = $_POST['difficulte_id'];

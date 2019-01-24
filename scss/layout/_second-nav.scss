@@ -76,7 +76,7 @@
                 display: block;
                 flex-basis: 33%;
 
-                ul {
+                &>ul {
                     display: flex;
                     justify-content: space-around;
 
@@ -88,6 +88,12 @@
 
                             color: $jaune;
                             text-align: center;
+                        }
+                        .sous-menu{
+                            display: none;
+                        }
+                        &:hover .sous-menu{
+                            display: inline-block;
                         }
                     }
                 }

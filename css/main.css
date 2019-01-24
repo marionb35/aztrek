@@ -711,14 +711,18 @@ header video {
       #second-nav .container #compte-contact {
         display: block;
         flex-basis: 33%; }
-        #second-nav .container #compte-contact ul {
+        #second-nav .container #compte-contact > ul {
           display: flex;
           justify-content: space-around; }
-          #second-nav .container #compte-contact ul li {
+          #second-nav .container #compte-contact > ul li {
             flex-basis: 40%; }
-            #second-nav .container #compte-contact ul li a {
+            #second-nav .container #compte-contact > ul li a {
               color: #ffa400;
-              text-align: center; } }
+              text-align: center; }
+            #second-nav .container #compte-contact > ul li .sous-menu {
+              display: none; }
+            #second-nav .container #compte-contact > ul li:hover .sous-menu {
+              display: inline-block; } }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
