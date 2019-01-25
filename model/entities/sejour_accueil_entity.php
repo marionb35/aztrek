@@ -22,6 +22,8 @@ function getOneCoupDeCoeur(): array
     LEFT JOIN depart ON sejour.id = depart.sejour_id AND depart.date_depart > NOW()
     WHERE sejour.coup_de_coeur = 1
     GROUP BY sejour.id
+LIMIT 1
+
 ";
 
     $stmt = $connection->prepare($query);

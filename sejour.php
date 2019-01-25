@@ -155,7 +155,7 @@ getMainMenu();
                     molestias corporis! Assumenda recusandae ad ipsam earum, rerum sequi praesentium sapiente ut?</p>
             </article>
         </div>
-        <a class="cta" href="#">+ de témoignages</a>
+        <a class="cta cta-orange-blanc" href="#">+ de témoignages</a>
 
     </div>
 

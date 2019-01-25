@@ -1,36 +1,41 @@
 $(document).ready(function () {
 
-  //Menu Responsive
-  var menu = document.querySelector(".menu"),
-    toggle = document.querySelector(".menu-toggle");
-
-  function toggleToggle() {
-    toggle.classList.toggle("menu-open");
-  };
-
-  function toggleMenu() {
-    menu.classList.toggle("active");
-  };
-
-  toggle.addEventListener("click", toggleToggle, false);
-  toggle.addEventListener("click", toggleMenu, false);
-
-  
+    //Menu Responsive
+    const menu = $(".menu");
+    const toggle = $(".toggle");
 
 
- 
+
+    // evt click burger
+    toggle.click(function () {
+        toggle.toggleClass("menu-open");
+        menu.toggleClass("active");
+    });
+
+
+
+// STICKY NAV
+    const mn = $("#second-nav");
+    const mns = "sticky";
+    const hdr = $('header').height();
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > hdr) {
+            mn.addClass(mns);
+        } else {
+            mn.removeClass(mns);
+        }
+    });
+
+    function setMenu() {
+        if ($(window).scrollTop() < hdr && $('.sticky').length && $('.active').length) {
+            menu.removeClass("active");
+
+        }
+    }
+
+    setMenu();
+    $(window).resize(setMenu);
 
 });
 
- // STICKY NAV
- var  mn = $("#second-nav");
- mns = "sticky";
- hdr = $('header').height();
-
-$(window).scroll(function() {
-if( $(this).scrollTop() > hdr ) {
- mn.addClass(mns);
-} else {
- mn.removeClass(mns);
-}
-});
